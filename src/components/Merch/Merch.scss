@@ -1,0 +1,60 @@
+#Merch{
+    height: 40vh;
+    .content{
+        display: flex;
+        background-image: url('../../../public/item_banniereshirt.png');
+        background-size: 70% 50%;
+        background-repeat: no-repeat;
+        background-position: center right;
+        height: 100%;
+        .socials-link{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 30%;
+            .picto{
+                width: 100px;
+            }
+        }
+        .merch{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            .text{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding-left: 70px;
+                color: #000000;
+                line-height: 34px;
+                text-transform: uppercase;
+                letter-spacing: -7px;
+                width: 42%;
+            }
+            .shirts{
+                width: 50%;
+                position: relative;
+                img{
+                    height: 100%;
+                    position: absolute;
+                    &:first-child{
+                        left: -50px;
+                    }
+                    &:nth-child(2){
+                        right: -135px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px){
+        .content{
+            .merch{
+                .text{
+                    font-size: 4vw;
+                    line-height: 2.6vw;
+                }
+            }
+        }
+    }
+}

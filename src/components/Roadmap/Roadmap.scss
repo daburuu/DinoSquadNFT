@@ -1,0 +1,44 @@
+#Roadmap{
+    h2{
+        margin-bottom: 50px;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        .custom-list{
+            .list-title{
+                position: relative;
+                font-size: 2rem;
+                font-family: 'Times New Roman', Times, serif;
+                text-transform: uppercase;
+                letter-spacing: 0;
+                margin-bottom: 10px;
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    background-image: url("../../../public/eth.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+                }
+            }
+            .list-text{
+                padding-left: 25px;
+                font-family: Calibri, sans-serif;
+                font-size: 2rem;
+                letter-spacing: 0;
+                margin-bottom: 25px;
+            }
+        }
+        .img-container{
+            margin-left: 50px;
+            height: 400px;
+            border-radius: 20px;
+            background: url('../../../public/CLOSE_UP_2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}

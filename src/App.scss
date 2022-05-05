@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'ArchivoBlack';
+  src: url('../public/ArchivoBlack-Regular.ttf');
+}
+
+:root{
+  font-size: 10px;
+}
+
+*, *:before, *:after{
+  box-sizing: border-box;
+  font-family: 'ArchivoBlack';
+  color: #FFFDFD;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main{
+  display: block;
+}
+
+body{
+  line-height: 1;
+}
+.content-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ol, ul{
+  list-style: none;
+}
+
+blockquote, q{
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+  content: '';
+  content: none;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input{
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body{
+  background-color: #000000;
+}
+
+h1{
+  font-size: 12vw;
+  text-transform: uppercase;
+  letter-spacing: -1.5vw;
+}
+h2{
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.text-s{
+  font-size: 1.5rem;
+}
+.text-m{
+  font-size: 2rem;
+}
+.text-l{
+  font-size: 5rem;
+}
+.flex{
+  display: flex;
+}
+
+.col-md-1{
+  width: 10%;
+}
+.col-md-2{
+  width: 20%;
+}
+.col-md-3{
+  width: 30%;
+}
+.col-md-4{
+  width: 40%;
+}
+.col-md-5{
+  width: 50%;
+}
+.col-md-6{
+  width: 60%;
+}
+.col-md-7{
+  width: 70%;
+}
+.col-md-8{
+  width: 80%;
+}
+.col-md-9{
+  width: 90%;
+}
+.col-md-10{
+  width: 100%;
+}
+.mr-2{
+  margin-right: 50px;
+}
+.mb-1{
+  margin-bottom: 25px;
+}
+.mb-2{
+  margin-bottom: 50px;
+}
+.mt-1{
+  margin-top: 25px;
+}
+.mt-2{
+  margin-top: 50px;
+}
+.align-center{
+  text-align: center;
+}
+.align-right{
+  text-align: right;
+}
+.btn-primary{
+  background-image: url('../public/item_buttonpurchase.png');
+  background-size: cover;
+}

@@ -1,0 +1,59 @@
+ul.accordion{
+    padding-left: 0;
+    margin-bottom: 60px;
+    .accordion_item {
+      padding: 15px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      list-style-type: none;
+      box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 12%);
+      .control{
+        float: right;
+      }
+      .button{
+        background-color: transparent;
+        border: none;
+        text-align: left;
+        font-size: 2.5rem;
+        width: 100%;
+        cursor: pointer;
+        span.title{
+            font-family: "Good dog";
+            display: inline-block;
+            font-size: 2.5rem;
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background-image: url("../../../public/eth.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                vertical-align: middle;
+                margin-bottom: 5px;
+            }
+        }
+      }
+      &.active{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+    .text_wrapper {
+      color: #000000;
+      height: 0;
+      overflow: hidden;
+      transition: height ease 0.2s;
+      font-size: 1.8rem;
+      .text{
+        border-top: 1px solid #FFFDFD;
+        padding: 10px 10px 0 25px;
+        margin-top: 20px;
+        p{
+            font-family: Calibri, sans-serif;
+            letter-spacing: normal;
+            margin-bottom: 10px;
+        }
+      }
+    }
+  }

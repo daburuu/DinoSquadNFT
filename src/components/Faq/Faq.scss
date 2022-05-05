@@ -1,0 +1,20 @@
+#Faq{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: -50px;
+    .content{
+        h2{
+            margin-bottom: 10px;
+        }
+        div{
+            padding-left: 25px;
+        }
+    }
+    .dino{
+        width: 40%;
+        img{
+            width: 100%;
+        }
+    }
+}

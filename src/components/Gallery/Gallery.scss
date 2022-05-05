@@ -1,0 +1,31 @@
+#Gallery{
+    .subtitle{
+        font-style: italic;
+        span{
+            color: #D7F740;
+        }
+    }
+    img.dino-internet{
+        width: 100%;
+    }
+    .arrow{
+        height: 50px;
+        width: 22px;
+        background-image: url("../../../public/item_arrow.png");
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 99;
+        cursor: pointer;
+        &.reverse{
+            transform: rotate(180deg) translateY(50%);
+            left: 0px;
+        }
+    }
+}
+.slick-slider{
+    padding: 0 30px;
+}

@@ -1,0 +1,22 @@
+#Welcome{
+    text-align: center;
+    .content{
+        text-align: left;
+        >div{
+            &:first-child{
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                padding: 0 25px;
+            }
+            &.img-container{
+                height: 250px;
+                border-radius: 20px;
+                background-color: lightblue;
+                background-image: url('../../../public/item_dino_preview.png');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+}
