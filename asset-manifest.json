@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DinoSquadNFT/static/css/main.659018c3.css",
-    "main.js": "/DinoSquadNFT/static/js/main.53c744b5.js",
+    "main.js": "/DinoSquadNFT/static/js/main.e6f5c3ea.js",
     "static/media/CLOSE_UP_2.jpg": "/DinoSquadNFT/static/media/CLOSE_UP_2.9ac9d7a3fb8e0133e345.jpg",
     "static/media/item_dino_preview.png": "/DinoSquadNFT/static/media/item_dino_preview.de4fe11e1f177faae61f.png",
     "static/media/item_arrow.png": "/DinoSquadNFT/static/media/item_arrow.800276b9a8895f91241b.png",
@@ -15,10 +15,10 @@
     "static/media/slick.woff": "/DinoSquadNFT/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/DinoSquadNFT/index.html",
     "main.659018c3.css.map": "/DinoSquadNFT/static/css/main.659018c3.css.map",
-    "main.53c744b5.js.map": "/DinoSquadNFT/static/js/main.53c744b5.js.map"
+    "main.e6f5c3ea.js.map": "/DinoSquadNFT/static/js/main.e6f5c3ea.js.map"
   },
   "entrypoints": [
     "static/css/main.659018c3.css",
-    "static/js/main.53c744b5.js"
+    "static/js/main.e6f5c3ea.js"
   ]
 }
