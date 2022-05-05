@@ -1,24 +1,37 @@
 {
   "files": {
     "main.css": "/DinoSquadNFT/static/css/main.659018c3.css",
-    "main.js": "/DinoSquadNFT/static/js/main.04fac36e.js",
+    "main.js": "/DinoSquadNFT/static/js/main.e034681a.js",
+    "static/media/img_05.png": "/DinoSquadNFT/static/media/img_05.2c55d50379c11f7c105c.png",
+    "static/media/img_06.png": "/DinoSquadNFT/static/media/img_06.5fc42128c0e4dcf9709f.png",
+    "static/media/img_02.png": "/DinoSquadNFT/static/media/img_02.9badec6f33a4ede2efe3.png",
+    "static/media/img_03.png": "/DinoSquadNFT/static/media/img_03.8368db216bcaae061e7a.png",
     "static/media/CLOSE_UP_2.jpg": "/DinoSquadNFT/static/media/CLOSE_UP_2.9ac9d7a3fb8e0133e345.jpg",
+    "static/media/img_04.png": "/DinoSquadNFT/static/media/img_04.fbd59200b7db6212552d.png",
+    "static/media/img_01.png": "/DinoSquadNFT/static/media/img_01.2ef6897a743581963757.png",
+    "static/media/item_thirt2.png": "/DinoSquadNFT/static/media/item_thirt2.20edfdfc7e85afee07ed.png",
+    "static/media/item_thirt1.png": "/DinoSquadNFT/static/media/item_thirt1.d1b8d5499a505f794815.png",
+    "static/media/item_dino_bust.png": "/DinoSquadNFT/static/media/item_dino_bust.af5f70d5b00a9ad6ad82.png",
     "static/media/item_dino_preview.png": "/DinoSquadNFT/static/media/item_dino_preview.de4fe11e1f177faae61f.png",
     "static/media/item_arrow.png": "/DinoSquadNFT/static/media/item_arrow.800276b9a8895f91241b.png",
     "static/media/ArchivoBlack-Regular.ttf": "/DinoSquadNFT/static/media/ArchivoBlack-Regular.e35d38651492de9e7226.ttf",
     "static/media/item_bones.png": "/DinoSquadNFT/static/media/item_bones.bd7da0fa91637c1e8440.png",
+    "static/media/DINO_LOGO.png": "/DinoSquadNFT/static/media/DINO_LOGO.792bf7186e7d3e600b1f.png",
     "static/media/item_bones02.png": "/DinoSquadNFT/static/media/item_bones02.7d6071765d915f2bb9ec.png",
     "static/media/eth.png": "/DinoSquadNFT/static/media/eth.a466ac51354a361c87f3.png",
+    "static/media/INSTA_LOGO.png": "/DinoSquadNFT/static/media/INSTA_LOGO.30afcce6e182dd38355a.png",
+    "static/media/DISCORD_LOGO.png": "/DinoSquadNFT/static/media/DISCORD_LOGO.bd657a1e7d7facf2468b.png",
+    "static/media/TWITTER_LOGO.png": "/DinoSquadNFT/static/media/TWITTER_LOGO.bd80478635210e9792d7.png",
     "static/media/slick.svg": "/DinoSquadNFT/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/DinoSquadNFT/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/DinoSquadNFT/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/DinoSquadNFT/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/DinoSquadNFT/index.html",
     "main.659018c3.css.map": "/DinoSquadNFT/static/css/main.659018c3.css.map",
-    "main.04fac36e.js.map": "/DinoSquadNFT/static/js/main.04fac36e.js.map"
+    "main.e034681a.js.map": "/DinoSquadNFT/static/js/main.e034681a.js.map"
   },
   "entrypoints": [
     "static/css/main.659018c3.css",
-    "static/js/main.04fac36e.js"
+    "static/js/main.e034681a.js"
   ]
 }
