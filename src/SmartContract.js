@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './SmartContract.scss';
 import { ethers } from 'ethers';
 import dinosquadAbi from './dinosquadAbi.json';
@@ -10,26 +10,48 @@ export let whitelistAdresses = [
     "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
     "0x976ea74026e726554db657fa54763abd0c3a0aa9",
 ];
-const contractAddress = "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9";
+const contractAddress = "0xEea2D272B57b4e1B28EFFD2D2fcafD72DCE63308";
 
 function SmartContract(){
     const [accounts, setAccounts] = useState([]);
+    const [uri, setUri] = useState("");
+
+    function baseUri(value){
+      setUri(value);
+    }
+
+    async function setBaseUri(){
+      if(window.ethereum) {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(
+          contractAddress,
+          dinosquadAbi.abi,
+          signer
+        );
+        try {
+          let response = await contract.setBaseUri(uri);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    }
 
     async function setSaleActive(){
-        if(window.ethereum) {
-            const provider = new ethers.providers.Web3Provider(window.ethereum);
-            const signer = provider.getSigner();
-            const contract = new ethers.Contract(
-              contractAddress,
-              dinosquadAbi.abi,
-              signer
-            );
-            try {
-              let response = await contract.setSaleState(true);
-            } catch (err) {
-                console.log(err);
-            }
-        }
+      if(window.ethereum) {
+          const provider = new ethers.providers.Web3Provider(window.ethereum);
+          const signer = provider.getSigner();
+          const contract = new ethers.Contract(
+            contractAddress,
+            dinosquadAbi.abi,
+            signer
+          );
+          try {
+            let response = await contract.setSaleState(true);
+          } catch (err) {
+              console.log(err);
+          }
+      }
     }
 
     async function setSaleInactive(){
@@ -190,7 +212,9 @@ function SmartContract(){
           <div className="first">
             1. Connect your Wallet
             <button onClick={connectAccounts}>Connect Wallet</button>
-            Set Base Url through etherscan
+            <br />
+            <input type="text" onChange={(e) => { baseUri(e.target.value)} } />
+            <button onClick={setBaseUri}>Set Base URI</button>
           </div>
           <div className="second">
             2. Set Sale = true : 

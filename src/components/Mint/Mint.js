@@ -21,7 +21,6 @@ export class Contract{
 }
 
 function Mint(){
-    let timeout = null;
     const [saleState, setSaleState] = useState(null)
     const [view, setView] = useState("public");
     const [accounts, setAccounts] = useState([]);

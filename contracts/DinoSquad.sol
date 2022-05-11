@@ -31,19 +31,28 @@ contract DinoSquad is Ownable, ERC721A, ReentrancyGuard, IERC2981 {
         Here i can toggle ON / OFF the public Sale by setting the variable to TRUE / FALSE.
         Same for setPreSaleState(bool newState)
     */
-    function setSaleState(bool newState) public onlyOwner {
+    function setSaleState(bool newState) onlyOwner public {
         saleActive = newState;
     }
 
-    function setPreSaleState(bool newState) public onlyOwner {
+    function setPreSaleState(bool newState) onlyOwner public {
         presaleActive = newState;
     }
 
-    function setBaseUri(string memory uri) public onlyOwner {
+    /*
+        BaseUri is used when it comes to building the tokenUri. The token URI should be a link to an IPFS folder
+        so it is immutable, which should contain json files for every tokens. JSONs files should contains
+        the metadata of the token (traits, image url, artist etc...).
+    */
+    function setBaseUri(string memory uri) onlyOwner public {
         baseUri = uri;
     }
 
-    function toggleReveal() public onlyOwner{
+    /*
+        This function allows you to switch between the placeholder and the real NFT when it comes to returning
+        the token URI. TRUE = revealed | FALSE = unrevealed.
+    */
+    function toggleReveal() onlyOwner public{
         isRevealed = !isRevealed;
     }
 
@@ -68,7 +77,7 @@ contract DinoSquad is Ownable, ERC721A, ReentrancyGuard, IERC2981 {
         This functions makes it so there's a button that transfer 1 percent of the contract current balance to my wallet, and then
         99% of the wallet to your adress.
     */
-    function withdraw() public onlyOwner {
+    function withdraw() onlyOwner public {
         uint balance = address(this).balance;
         payable(0xB2CD18c595447b50C1581bfbEAebEADC4D8A6BD8).transfer(balance * 1 / 100);
         payable(msg.sender).transfer(address(this).balance);
@@ -85,13 +94,14 @@ contract DinoSquad is Ownable, ERC721A, ReentrancyGuard, IERC2981 {
 
     /*
         WhiteList Functions
+
+        I first check that the PreSale is open, that use is minting an allowed amount of tokens,
+        that we do not exceed 5555 minteds tokens, that the price is correct and that the user is in the whitelist.
+        For the last check, we're using some merkletrees. It's pretty hard to explain so i'll leave a link there:
+        https://medium.com/@ItsCuzzo/using-merkle-trees-for-nft-whitelists-523b58ada3f9
+        Basically i'm storing an array inside a hash so it costs less when it comes to contract deployment.
+        Then, i save inside an array that the sender has already minted {numberOfTokens} NFTs.
     */
-    // I first check that the PreSale is open, that use is minting an allowed amount of tokens,
-    // that we do not exceed 5555 minteds tokens, that the price is correct and that the user is in the whitelist.
-    // For the last check, we're using some merkletrees. It's pretty hard to explain so i'll leave a link there:
-    // https://medium.com/@ItsCuzzo/using-merkle-trees-for-nft-whitelists-523b58ada3f9
-    // Basically i'm storing an array inside a hash so it costs less when it comes to contract deployment.
-    // Then, i save inside an array that the sender has already minted {numberOfTokens} NFTs.
     function wlMint(bytes32[] calldata merkleproof, uint8 numberOfTokens) external payable returns (string memory) {
         uint256 ts = totalSupply();
         require(presaleActive, "Pre sale must be active to mint tokens");
@@ -105,21 +115,19 @@ contract DinoSquad is Ownable, ERC721A, ReentrancyGuard, IERC2981 {
         return "Minted";
     }
 
-    // This function simply checks if the user is in the merkletree.
+    /*
+        This function simply checks if the user is in the merkletree.
+    */
     function _verifyWhiteList(bytes32[] calldata _merkleproof, address _sender) private view returns(bool) {
         bytes32 leaf = keccak256(abi.encodePacked(_sender));
         return MerkleProof.verify(_merkleproof, hashRoot, leaf);
     }
 
-    function tokenURI(uint256 tokenId) public view virtual override returns (string memory){
-        if (isRevealed == true) {
-            return string(abi.encodePacked(baseUri, Strings.toString(tokenId + 1), ".json")) ;
-        } else {
-            return preRevealUrl;
-        }
-    }
-
-    function kill() external onlyOwner {
+    /*
+        DEVELOPMENT ONLY. This function destroy the contract, which is mandatory when it comes to deploying it
+        on a testnet (Rinkeby or Ropsten).
+    */
+    function kill() onlyOwner external {
         selfdestruct(payable(msg.sender));
     }
 }
