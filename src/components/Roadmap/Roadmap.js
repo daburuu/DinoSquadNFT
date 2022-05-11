@@ -1,12 +1,13 @@
 import './Roadmap.scss';
 import Accordion from './Accordion';
-function Roadmap(){
 
+function Roadmap(){
+    
     return (
-        <div id="Roadmap" className="mb-2">
+        <div id="Roadmap">
             <h2>Roadmap</h2>
             <div className="content flex">
-                <div className="col-md-6">
+                <div className="col-md-6 accordion-container">
                     <Accordion />
                 </div>
                 <div className="col-md-4 img-container">

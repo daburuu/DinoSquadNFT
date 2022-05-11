@@ -9,12 +9,45 @@
         }
         div{
             padding-left: 25px;
+            &.answer{
+                margin: 5px 0 25px;
+            }
         }
     }
     .dino{
         width: 40%;
         img{
             width: 100%;
+        }
+    }
+    @media screen and (max-width: 768px){
+        margin-top: -25px;
+        .content{
+           width: 100%;
+           > div{
+               padding-left: 0;
+               text-align: justify;
+               div{
+                   padding-left: 0;
+                   &.question{
+                       text-transform: uppercase;
+                       text-align: left;
+                   }
+                   &.answer{
+                       font-size: 1.5rem;
+                   }
+               }
+           }
+        }
+        .dino{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 576px){
+        .dino{
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     }
 }

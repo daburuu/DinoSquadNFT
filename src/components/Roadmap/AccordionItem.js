@@ -14,7 +14,7 @@ const AccordionItem = ({ element, active, onToggle }) => {
         ref={contentEl}
         className="text_wrapper"
         style={ active ? { height: contentEl.current.scrollHeight } : { height: "0px" } } > 
-        <div className="text">{text.map((e) =>  <p>{e}</p> )}</div>
+        <div className="text">{text.map((e, i) =>  <p key={i}>{e}</p> )}</div>
       </div>
     </li>
   );

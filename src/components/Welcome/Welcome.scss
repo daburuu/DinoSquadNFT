@@ -9,14 +9,35 @@
                 flex-direction: column;
                 padding: 0 25px;
             }
-            &.img-container{
-                height: 250px;
-                border-radius: 20px;
-                background-color: lightblue;
-                background-image: url('../../../public/item_dino_preview.png');
-                background-size: cover;
-                background-position: center;
+        }
+    }
+    @media screen and (max-width: 992px){
+        .content{
+            .img-welcome{
+                flex: 1;
             }
         }
     }
+    @media screen and (max-width: 768px){
+        .content{
+            flex-direction: column-reverse;
+            > div{
+                width: 100%;
+                text-align: justify;
+                &:first-child{
+                    padding: 0;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+            }
+            .img-welcome{
+                flex: 1;
+                width: 100%;
+                margin-bottom: 50px;
+                max-width: 600px;
+                margin: 0 auto 50px;
+            }
+        }
+    }
+
 }

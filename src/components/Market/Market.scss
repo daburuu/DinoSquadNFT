@@ -21,4 +21,33 @@
             width: 50px;
         }
     }
+    @media screen and (max-width: 992px){
+        a{
+            font-size: 3rem;
+            img{
+                width: 35px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px){
+        height: 25vh;
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 576px){
+        a{
+            font-size: 2rem;
+            img{
+                width: 25px;
+            }
+        }
+    }
+    @media screen and (max-width: 478px){
+        a{
+            font-size: 1.8rem;
+            img{
+                width: 20px;
+            }
+        }
+    }
 }

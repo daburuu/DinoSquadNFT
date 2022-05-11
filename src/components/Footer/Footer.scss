@@ -18,4 +18,16 @@
             height: 25px;
         }
     }
+    @media screen and (max-width: 768px){
+        .pull-left{
+            width: 20%;
+        }
+        img.logo{
+            width: 60%;
+            height: auto;
+        }
+        .pull-right{
+            width: 20%;
+        }
+    }
 }

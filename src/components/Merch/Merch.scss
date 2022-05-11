@@ -38,10 +38,10 @@
                     height: 100%;
                     position: absolute;
                     &:first-child{
-                        left: -50px;
+                        left: 0;
                     }
                     &:nth-child(2){
-                        right: -135px;
+                        right: -50px;
                     }
                 }
             }
@@ -53,6 +53,87 @@
                 .text{
                     font-size: 4vw;
                     line-height: 2.6vw;
+                }
+                .shirts{
+                    flex: 1;
+                    position: relative;
+                    img{
+                        height: 100%;
+                        position: absolute;
+                        &:first-child{
+                            width: 30vw;
+                            height: auto;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: -50px;
+                        }
+                        &:nth-child(2){
+                            right: -50px;
+                            width: 30vw;
+                            height: auto;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .content{
+            .socials-link{
+                justify-content: center;
+                .picto{
+                    width: 50px;
+                }
+            }
+            .merch{
+                .text{
+                    padding-left: 35px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        height: 30vh;
+        margin: 75px 0;
+        .content{
+            background-position: top;
+            background-size: 100%;
+            flex-direction: column-reverse;
+            .merch{
+                margin-bottom: 75px;
+                width: 100%;
+                .text{
+                    font-size: 2rem;
+                    padding-top: 25px;
+                    line-height: 1.2rem;
+                    letter-spacing: -4px;
+                    padding-left: 20px;
+                }
+                .shirts{
+                    img{
+                        &:first-child{
+                            width: 40vw;
+                            height: auto;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: -50px;
+                        }
+                        &:nth-child(2){
+                            right: 0px;
+                            width: 40vw;
+                            height: auto;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .socials-link{
+                width: 100%;
+                .picto{
+                    width: 100px;
                 }
             }
         }

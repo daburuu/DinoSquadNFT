@@ -1,0 +1,181 @@
+#Mint{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 100vh;
+    .header{
+        background-image: url('../../../public/item_bones.png');
+        background-size: cover;
+        text-align: center;
+        img{
+            width: 50%;
+        }
+        height: 300px;
+    }
+    .notifications{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        transition: all 0.5s ease;
+        opacity: 0;
+        top: -3rem;
+        color: #151419;
+        &.alert{
+            background-color: #FF6961;
+        }
+        &.success{
+            background-color: #BBEEBB;
+        }
+        &.info{
+            background-color: #D7F740;
+        }
+        &.visible{
+            top: 20px;
+            opacity: 1;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+    }
+    .content{
+        position: relative;
+        z-index: 99;
+        height: 50vh;
+        width: 100%;
+        position: absolute;
+        top: calc(50% + 100px);
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-50%);
+        button{
+            margin: 0;
+        }
+        .sale-state,
+        .minteds{
+            font-size: 3rem;
+            .active{
+                color: green;
+            }
+            .disabled{
+                color: red;
+            }
+        }
+        .public-window,
+        .whitelist-window{
+            text-align: center;
+            font-size: 3rem;
+            button{
+                margin-top: 25px;
+            }
+        }
+        .less,
+        .plus,
+        .token-number{
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .less,
+        .plus{
+            background-color: transparent;
+            color: #FFFDFD;
+            border: 1px solid #E3E3E3;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding-bottom: 5px;
+            cursor: pointer;
+            &:disabled{
+                cursor: not-allowed;
+                background-color: rgba(0, 0, 0, .2);
+            }
+        }
+        .token-number{
+            padding-top: 5px;
+        }
+        button.mint{
+            display: inline-block;
+            background-color: #D7F740;
+            border-radius: 5px;
+            border: none;
+            padding: 10px 25px;
+            margin-left: 25px;
+            cursor: pointer;
+            &:disabled{
+                cursor: not-allowed;
+                background-color: rgba(215, 247, 64, .2);
+            }
+        }
+        .toggle-btns{
+            text-align: center;
+            clear: both;
+            border-bottom: 1px solid #E3E3E3;
+            button{
+                margin: 0 15px 0 0;
+                cursor: pointer;
+                border: 1px solid #E3E3E3;
+                background-color: rgba(255, 255, 255, .1);
+                color: #737070;
+                border-radius: 5px 5px 0 0;
+                margin-right: 2px;
+                transition: all .2s ease;
+                &.view-public{
+                    transform-origin: bottom right;
+                }
+                &.view-whitelist{
+                    transform-origin: bottom left;
+                }
+                &.selected{
+                    color: #FFFDFD;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .bottom{
+            z-index: 99;
+            padding: 25px;
+            border: 1px solid #E3E3E3;
+            border-top: none;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .whitelist-window > div,
+            .public-window > div{
+                font-size: 4rem;
+                transform: scale(1, 1.2);
+                text-transform: uppercase;
+                margin-bottom: 50px;
+            }
+            .connect-btn{
+                width: auto;
+                background-color: #198754;
+                color: #FFFDFD;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 15px;
+                cursor: pointer;
+            }
+            .disconnect-btn{
+                width: auto;
+                background-color: #dc3545;
+                color: #FFFDFD;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 15px;
+                cursor: pointer;
+            }
+            .infos{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+        .dino{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+        }
+    }
+}
