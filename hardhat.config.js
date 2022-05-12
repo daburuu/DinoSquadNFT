@@ -3,6 +3,7 @@ require("@nomiclabs/hardhat-etherscan");
 require("hardhat-gas-reporter");
 
 const privateKey = process.env.REACT_APP_PRIVATE_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
@@ -28,7 +29,7 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: "WYIH8JQDZ3QUSZTCHRNQR7C6JBDBX6AGYB"
+    apiKey: apiKey
   },
   gasReporter: {
     currency: 'EUR',
