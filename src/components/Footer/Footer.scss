@@ -30,4 +30,13 @@
             width: 20%;
         }
     }
+    @media screen and (max-width: 476px){
+        .pull-left{
+            width: 20%;
+            font-size: 1rem;
+            a{
+                margin: 15px 0;
+            }
+        }
+    }
 }

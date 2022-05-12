@@ -138,4 +138,15 @@
             }
         }
     }
+    @media screen and (max-width: 476px) {
+        .content{
+            .merch{
+                margin-bottom: 45px;
+                .text{
+                    padding-top: 0;
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
 }
