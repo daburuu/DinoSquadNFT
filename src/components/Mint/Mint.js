@@ -48,7 +48,7 @@ function Mint(){
             message: text,
             type: type
         });
-        timeout = setTimeout(() => {
+        setTimeout(() => {
             setMessage({
                 message: null,
                 type: null

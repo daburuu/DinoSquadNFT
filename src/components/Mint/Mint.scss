@@ -178,4 +178,56 @@
             height: 100%;
         }
     }
+    @media screen and (max-width: 576px){
+        .header{
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: auto;
+            margin-bottom: 50px;
+        }
+        .content{
+            position: relative;
+            top: 0;
+            transform: none;
+            .infos{
+                flex-direction: column;
+            }
+            .sale-state,
+            .minteds{
+                font-size: 2rem;
+                width: 100%;
+                margin-bottom: 25px;
+                text-align: center;
+            }
+            .toggle-btns{
+                button{
+                    font-size: 2rem;
+                }
+            }
+            .dino{
+                display: none;
+            }
+            .bottom{
+                .whitelist-window > div,
+                .public-window > div{
+                    margin-bottom: 25px;
+                }
+                .connect-btn{
+                    font-size: 3rem;
+                    margin: 50px;
+                }
+            }
+            button.mint{
+                margin: 25px auto 0;
+                display: block;
+            }
+        }
+    }
+    @media screen and (max-width: 465px){
+        .content{
+            .toggle-btns{
+                font-size: 1rem;
+            }
+        }
+    }
 }
