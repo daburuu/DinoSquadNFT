@@ -2,8 +2,8 @@ require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
 require("hardhat-gas-reporter");
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
+const privateKey = process.env.REACT_APP_PRIVATE_KEY;
+
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
 
@@ -11,9 +11,6 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     console.log(account.address);
   }
 });
-
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
@@ -27,7 +24,7 @@ module.exports = {
     },
     rinkeby: {
       url: "https://eth-rinkeby.alchemyapi.io/v2/9ffpV_QJv5bHTtDQbBdmll65LEWTTKfH",
-      accounts: ["2e5175664e5c1e8d132f5860ff811551e1f1cd2be6b6f6554837cebeb3e0e229"]
+      accounts: [privateKey]
     },
   },
   etherscan: {
